@@ -4,20 +4,22 @@ public class FrenchRevenueTaxCalculator {
     public static void main(String[] args){
 
         // je test : 11294,28797,82341,177106,177107
-        double netAnnualSalary = 240000.0;
+        double netAnnualSalary = 90000.0;
         double taxableAnnualSalary;
         double netSalary = 0.0;
         double taxIncome = 0.0;
         double pourcentageTaxIncome;
         double taxableAnnualySalaryDeduction;
+        double contributionSocialSalary;
 
         //J'estime qu'un cadre touche 40 000€ annuel brute.
         if (netAnnualSalary >= 40000){
-            taxableAnnualSalary = netAnnualSalary * 0.75;
+            contributionSocialSalary = 0.75;
         }
         else {
-            taxableAnnualSalary = netAnnualSalary * 0.77;
+            contributionSocialSalary = 0.77;
         }
+        taxableAnnualSalary = netAnnualSalary * contributionSocialSalary;
         System.out.println("Après cotisation votre salaire est de : " + taxableAnnualSalary + "€");
 
         /*Bonus N1
@@ -70,12 +72,8 @@ public class FrenchRevenueTaxCalculator {
             netSalary = taxableAnnualSalary - taxIncome;
         }
 
-        if (taxableAnnualSalary >= 177106){
-            taxIncome += interval4;
-            netSalary = taxableAnnualSalary - taxIncome;
-        }
-
         if (taxableAnnualSalary > 177106){
+            taxIncome += interval4;
             taxIncome += interval5;
             netSalary = taxableAnnualSalary - taxIncome;
         }

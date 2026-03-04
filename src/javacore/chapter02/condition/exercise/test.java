@@ -6,7 +6,7 @@ public class test {
         // je test : 11294,28797,82341,177106,177107
         double netAnnualSalary = 40000.0;
         double taxableAnnualSalary;
-        double growthAnnualSalary = 0.0;
+        double grossAnnualSalary = 0.0;
         double taxIncome = 0.0;
         double pourcentageTaxIncome;
         double taxableAnnualySalaryDeduction;
@@ -36,41 +36,19 @@ public class test {
 
         if (taxableAnnualSalary > 177106){
             taxIncome += (taxableAnnualSalary - 177106) * 0.45;
-            taxIncome += (177106 - 82342) * 0.41;
-            growthAnnualSalary = taxableAnnualSalary - taxIncome;
         }
-
-        if (82342 <= taxableAnnualSalary && taxableAnnualSalary <= 177106) {
+        if (taxableAnnualSalary > 82342) {
             taxIncome += (taxableAnnualSalary - 82342) * 0.41;
-            growthAnnualSalary = taxableAnnualSalary - taxIncome;
         }
-
-        if (taxableAnnualSalary > 82341) {
-            taxIncome += (82341 - 28798) * 0.30;
-            growthAnnualSalary = taxableAnnualSalary - taxIncome;
+        if (taxableAnnualSalary > 28798) {
+            taxIncome += (taxableAnnualSalary - 28798) * 0.11;
         }
-
-        if (28798 <= taxableAnnualSalary && taxableAnnualSalary <= 82341) {
-            taxIncome += (taxableAnnualSalary - 28798) * 0.30;
-            growthAnnualSalary = taxableAnnualSalary - taxIncome;
-        }
-
-        if (taxableAnnualSalary > 28797) {
-            taxIncome += (28797 - 11295) * 0.11;
-            growthAnnualSalary = taxableAnnualSalary - taxIncome;
-        }
-
-        if (11295 <= taxableAnnualSalary && taxableAnnualSalary <= 28797){
+        if (taxableAnnualSalary > 11295){
             taxIncome += (taxableAnnualSalary - 11295) * 0.11;
-            growthAnnualSalary = taxableAnnualSalary - taxIncome;
         }
+        grossAnnualSalary = taxableAnnualSalary - taxIncome;
 
-        if (taxableAnnualSalary >= 11294){
-            taxIncome +=  (11294 - 0) * 0.0;
-            growthAnnualSalary = taxableAnnualSalary - taxIncome;
-        }
-
-        System.out.println("Votre salaire annuel net d'impôt est : " + growthAnnualSalary + "€");
+        System.out.println("Votre salaire annuel net d'impôt est : " + grossAnnualSalary + "€");
         System.out.println("Le total d'impôts sur le revenue est de : " + taxIncome);
 
         pourcentageTaxIncome = (taxIncome *100) / taxableAnnualSalary;

@@ -4,7 +4,7 @@ public class test {
     public static void main(String[] args){
 
         // je test : 11294,28797,82341,177106,177107
-        double netAnnualSalary = 40000.0;
+        double netAnnualSalary = 200000.0;
         double taxableAnnualSalary;
         double grossAnnualSalary = 0.0;
         double taxIncome = 0.0;
@@ -36,16 +36,20 @@ public class test {
 
         if (taxableAnnualSalary > 177106){
             taxIncome += (taxableAnnualSalary - 177106) * 0.45;
+            taxableAnnualSalary = 177106;
         }
-        if (taxableAnnualSalary > 82342) {
+        if (taxableAnnualSalary > 82341) {
             taxIncome += (taxableAnnualSalary - 82342) * 0.41;
+            taxableAnnualSalary = 82341;
         }
-        if (taxableAnnualSalary > 28798) {
-            taxIncome += (taxableAnnualSalary - 28798) * 0.11;
+        if (taxableAnnualSalary > 28797) {
+            taxIncome += (taxableAnnualSalary - 28798) * 0.30;
+            taxableAnnualSalary = 28797;
         }
-        if (taxableAnnualSalary > 11295){
+        if (taxableAnnualSalary > 11294){
             taxIncome += (taxableAnnualSalary - 11295) * 0.11;
         }
+        taxableAnnualSalary = netAnnualSalary * contributionSocialSalary;
         grossAnnualSalary = taxableAnnualSalary - taxIncome;
 
         System.out.println("Votre salaire annuel net d'impôt est : " + grossAnnualSalary + "€");

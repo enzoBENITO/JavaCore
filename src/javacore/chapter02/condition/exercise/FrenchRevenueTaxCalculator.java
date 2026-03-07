@@ -4,7 +4,7 @@ public class FrenchRevenueTaxCalculator {
     public static void main(String[] args){
 
         // je test : 11294,28797,82341,177106,177107
-        double netAnnualSalary = 90000.0;
+        double netAnnualSalary = 40000.0;
         double taxableAnnualSalary;
         double netSalary = 0.0;
         double taxIncome = 0.0;

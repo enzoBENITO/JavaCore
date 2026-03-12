@@ -4,7 +4,7 @@ public class SmallestDivisorFinder {
     public static void main (String[] args){
 
         //J'ai tester un nombre premier, un nombre pair et impair.
-        int number = 12;
+        int number = 27;
         int divisor =2;
         boolean infinite= true;
         while (infinite){

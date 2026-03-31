@@ -21,23 +21,23 @@ public class PrimeNumberSearcherV1 {
 //        System.out.println("Il y a " + counter + " nombre premiers.");
 
         //BONUS N°1
-        int primeNumber = 2;
+        int primeNumberFinder = 2;
         int analyzeNumber = 0;
 
         while (potentialPrimeNumber < 50) {
             isPrimeNumber = true;
-            for (int potentialdivisor = 2; potentialdivisor < primeNumber; potentialdivisor++) {
-                if (primeNumber % potentialdivisor == 0) {
+            for (int potentialdivisor = 2; potentialdivisor < primeNumberFinder; potentialdivisor++) {
+                if (primeNumberFinder % potentialdivisor == 0) {
                     isPrimeNumber = false;
                 }
             }
             if (isPrimeNumber == true) {
-                System.out.println(primeNumber);
+                System.out.println(primeNumberFinder);
                 potentialPrimeNumber++;
             }
-            primeNumber++;
+            primeNumberFinder++;
         }
         System.out.println("Il y a " + potentialPrimeNumber + " nombre premiers.");
-        System.out.println("Il a fallu " + analyzeNumber + " analyses.");
+        System.out.println("Il a fallu " + primeNumberFinder + " analyses.");
     }
 }

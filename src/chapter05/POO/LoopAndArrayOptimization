@@ -1,0 +1,28 @@
+package com.comparaison.middleware;
+
+public class LoopAndArrayOptimization {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        //créer un tableau vide de meme taille que number
+        int[] results = new int[numbers.length];
+
+//        for (int i = 0; i < numbers.length; i++) {
+//            results[i] = numbers[i] * 2;
+//        }
+//
+//        for (int j = 0; j < numbers.length; j += 1) {
+//            results[j] += 3;
+//        }
+
+//        for (int k = 0; k < results.length; k = k + 1) {
+//            System.out.println(results[k]);
+//        }
+        //--------------------------------------------------------------------------------------------------
+
+        for (int i = 0; i < numbers.length; i++) {
+            results[i] = (numbers[i] * 2) + 3;
+            System.out.println(results[i]);
+        }
+    }
+}
+

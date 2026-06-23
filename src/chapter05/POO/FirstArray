@@ -1,1 +1,45 @@
+package com.comparaison.middleware;
 
+import java.util.Arrays;
+
+public class FirstArrays {
+    public static void main(String[] args) {
+
+        int[] integerArray;
+        integerArray = new int[10];
+        integerArray[0] = 1;
+
+        //Peupler le tableau
+        for (int i = 1; i < integerArray.length; i++) {
+            integerArray[i] = i + 1;
+        }
+        displayArray(integerArray);
+        System.out.println("------------------------------");
+        multiplethree(integerArray);
+        System.out.println("------------------------------");
+        displayArray(integerArray);
+    }
+
+    public static void displayArray(int[] array) {
+        for (int values : array) {
+            System.out.println("Valeurs du tableau : " + values);
+        }
+    }
+
+    public static void pair(int[] array) {
+        for (int values : array) {
+            if (values % 2 == 0) {
+                System.out.println("Valeurs pairs : " + values);
+            }
+        }
+    }
+
+    public static void multiplethree(int[] array) {
+        for (int values = 1; values < array.length; values++) {
+            if (array[values] % 3 == 0) {
+                array[values - 1] = 0;
+            }
+        }
+    }
+
+}

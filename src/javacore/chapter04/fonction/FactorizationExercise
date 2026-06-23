@@ -1,0 +1,62 @@
+package com.comparaison.middleware;
+
+public class FactorizationExercise {
+    public static void main(String[] args) {
+
+        // Afficher les nombres de 1 à 5
+//        for (int i = 1; i <= 5; i++) {
+//            System.out.println("Nombre: " + i);
+//        }
+
+//        // Afficher la table de multiplication de 2
+//        System.out.println("Table de multiplication de 2 :");
+//        for (int i = 1; i <= 10; i++) {
+//            System.out.println("2 x " + i + " = " + (2 * i));
+//        }
+//
+//        // Afficher la table de multiplication de 3
+//        System.out.println("Table de multiplication de 3 :");
+//        for (int i = 1; i <= 10; i++) {
+//            System.out.println("3 x " + i + " = " + (3 * i));
+//        }
+//
+//        // Afficher la table de multiplication de 6
+//        System.out.println("Table de multiplication de 6 :");
+//        for (int i = 1; i <= 10; i++) {
+//            System.out.println("6 x " + i + " = " + (6 * i));
+//        }
+
+//        // Afficher les carrés des nombres de 1 à 5
+//        System.out.println("Carrés des nombres de 1 à 5 :");
+//        for (int i = 1; i <= 5; i++) {
+//            System.out.println(i + " au carré = " + (i * i));
+//        }
+
+//        // Afficher les carrés des nombres de 6 à 10
+//        System.out.println("Carrés des nombres de 6 à 10 :");
+//        for (int i = 6; i <= 10; i++) {
+//            System.out.println(i + " au carré = " + (i * i));
+//        }
+
+        affichageNombre(8);
+        tableMultiplication(7);
+        intervalleCarre(6);
+    }
+    public static void affichageNombre(int nombre){
+        for (int i = 1; i <= nombre; i++) {
+            System.out.println("Nombre: " + i);
+        }
+    }
+    public static void tableMultiplication(int nombre){
+        System.out.println("Table de multiplication de " + nombre + " :");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(nombre + " x " + i + " = " + (nombre * i));
+        }
+    }
+    public static void intervalleCarre(int nombre){
+        System.out.println("Carrés des nombres de 1 à " + nombre + " :");
+        for (int i = 1; i <= nombre; i++) {
+            System.out.println(i + " au carré = " + (i * i));
+        }
+    }
+}
